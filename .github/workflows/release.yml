@@ -22,11 +22,15 @@ jobs:
           TAG: ${{ github.ref_name }}
         run: |
           version="${TAG#v}"
-          awk -v v="$version" '
-            $0 ~ "^## \\[" v "\\]" { found = 1; next }
-            found && /^## \[/ { exit }
-            found { print }
-          ' CHANGELOG.md > notes.md
+          if [ -f CHANGELOG.md ]; then
+            awk -v v="$version" '
+              $0 ~ "^## \\[?v?" v "\\]?( |$)" { found = 1; next }
+              found && /^## / { exit }
+              found { print }
+            ' CHANGELOG.md > notes.md
+          else
+            : > notes.md
+          fi
           [ -s notes.md ] || echo "Release $version" > notes.md
 
       - name: Create or update release
