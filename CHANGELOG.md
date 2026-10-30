@@ -5,6 +5,11 @@ Tutte le modifiche rilevanti a questo modulo sono documentate in questo file.
 Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.1.0/)
 e questo progetto aderisce al [Semantic Versioning](https://semver.org/lang/it/).
 
+## 1.3.1
+
+- Fix: gli endpoint pubblici di log consenso e report scansione ignorano valori JSON non stringa (niente 500).
+- Fix: rate limit e purge del registro usano l'ora del DB, coerente con `created_at`.
+
 ## [1.3.0] - 2026-10-26
 
 ### Added
