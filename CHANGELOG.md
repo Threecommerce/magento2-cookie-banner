@@ -5,6 +5,10 @@ Tutte le modifiche rilevanti a questo modulo sono documentate in questo file.
 Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.1.0/)
 e questo progetto aderisce al [Semantic Versioning](https://semver.org/lang/it/).
 
+## 1.3.3
+
+- Chore: aggiunto il file `LICENSE` nella radice del modulo. Nessuna modifica al codice.
+
 ## 1.3.2
 
 - Fix: escaping degli id nei nomi dei campi della tabella cookie in admin (conformità standard di codice Magento2).
