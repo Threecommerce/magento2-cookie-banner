@@ -27,7 +27,7 @@ Free cookie consent banner for Magento 2 and Mage-OS with three categories (nece
 
 ![Admin grid of the consent log with filters and CSV export](images/consent-log-grid.png)
 
-![Admin page of the detected cookies with category, duration and purpose to review](images/cookie-scan-admin.png)
+![Cookie registry admin grid with category, provider, purpose, duration, status and source, plus Add cookie and Run scan now buttons](images/cookie-registry-admin.png)
 
 ## Requirements
 

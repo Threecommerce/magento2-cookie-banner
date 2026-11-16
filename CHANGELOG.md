@@ -5,6 +5,10 @@ Tutte le modifiche rilevanti a questo modulo sono documentate in questo file.
 Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.1.0/)
 e questo progetto aderisce al [Semantic Versioning](https://semver.org/lang/it/).
 
+## 1.5.1
+
+- Fixed: nella griglia *Registro cookie* la colonna Azioni era vuota (mancavano *Modifica* e *Cancella*).
+
 ## 1.5.0
 
 - Added: **registro dei cookie**, unica fonte per il banner e per la cookie policy. Nuova griglia admin Stores → **Registro cookie** (sostituisce *Cookie rilevati*) con filtri per stato, categoria e origine, modifica in linea, esportazione CSV, azioni di massa *Pubblica* / *Nascondi* / *Cancella*, pulsanti *Aggiungi cookie* ed *Esegui la scansione ora*.
