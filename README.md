@@ -5,7 +5,7 @@ Free cookie consent banner for Magento 2 and Mage-OS with three categories (nece
 ![Cookie consent banner on a Magento 2 storefront with Reject, Customize and Accept all buttons](images/cookie-banner-storefront.png)
 
 **Compatibility:** Magento 2.4.x · Mage-OS 3.x · PHP 8.1+ (tested on PHP 8.4) · Themes: Luma, Breeze, Hyvä
-**License:** free · **Language:** Italian texts out of the box, editable from the admin · **Current version:** see [Releases](../../releases)
+**License:** free · **Language:** Italian and English (en_US) out of the box, editable from the admin · **Current version:** see [Releases](../../releases)
 
 ## Features
 

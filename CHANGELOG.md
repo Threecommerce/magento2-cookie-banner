@@ -5,6 +5,12 @@ Tutte le modifiche rilevanti a questo modulo sono documentate in questo file.
 Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.1.0/)
 e questo progetto aderisce al [Semantic Versioning](https://semver.org/lang/it/).
 
+## 1.4.0
+
+- Added: traduzione inglese `i18n/en_US.csv` di tutti i testi del banner (titolo, testi, pulsanti, pannello preferenze, categorie, durata e finalità del cookie di consenso), del dizionario dei cookie comuni (durate e finalità) e delle pagine admin.
+- Changed: nel dettaglio dei cookie del banner durata e finalità dei cookie rilevati dalla scansione vengono tradotte nella lingua dello store (le durate "N anni/mesi/giorni…" passano da frasi con segnaposto). I valori già salvati restano validi; le righe dell'elenco manuale non cambiano (sono già per store).
+- Changed: la scansione salva le durate sempre in italiano, indipendentemente dalla lingua dell'admin o del cron.
+
 ## 1.3.3
 
 - Chore: aggiunto il file `LICENSE` nella radice del modulo. Nessuna modifica al codice.
