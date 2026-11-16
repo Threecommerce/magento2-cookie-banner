@@ -5,6 +5,18 @@ Tutte le modifiche rilevanti a questo modulo sono documentate in questo file.
 Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.1.0/)
 e questo progetto aderisce al [Semantic Versioning](https://semver.org/lang/it/).
 
+## 1.5.0
+
+- Added: **registro dei cookie**, unica fonte per il banner e per la cookie policy. Nuova griglia admin Stores → **Registro cookie** (sostituisce *Cookie rilevati*) con filtri per stato, categoria e origine, modifica in linea, esportazione CSV, azioni di massa *Pubblica* / *Nascondi* / *Cancella*, pulsanti *Aggiungi cookie* ed *Esegui la scansione ora*.
+- Added: form del cookie con nome, categoria, stato, **titolare**, durata, finalità, ordinamento e testi propri per ogni store view (titolare, durata, finalità; un campo vuoto usa il testo predefinito, tradotto con i file i18n).
+- Added: **widget CMS "Tabella dei cookie"** (`{{widget type="Threecommerce\CookieBanner\Block\Widget\CookieTable"}}`) per la cookie policy: tabella semplice Nome / Titolare / Finalità / Durata con i cookie pubblicati della store view, filtro opzionale per categoria (`category`) e colonna Categoria opzionale (`show_category`). Senza CSS del modulo, usa gli stili delle tabelle del tema.
+- Added: cache di banner e tabella col tag `tc_cookie`, pulita (anche su Varnish) a ogni modifica del registro e quando la scansione trova cookie nuovi.
+- Added: il dizionario dei cookie comuni indica anche il titolare (Google Ireland Ltd, Meta Platforms Ireland Ltd, Microsoft…); i cookie di prima parte mostrano il dominio dello store (es. `threecommerce.it`). Nuovo cookie `maxmind_redirect`; il cookie `store` dura 1 anno ("Ricorda la lingua / lo store scelto"). Traduzioni inglesi dei nuovi testi.
+- Changed: tolto il campo *Elenco cookie* dalle impostazioni. Una data patch sposta il suo contenuto nel registro: le righe dello scope default diventano i testi predefiniti (stato pubblicato, origine manuale), quelle di store view (o website) i testi della store view, creando il cookie se manca; poi la configurazione viene cancellata. I cookie riconosciuti e mai modificati prendono i testi aggiornati del dizionario; lo stato "Ignorato" diventa "Nascosto".
+- Changed: tabella `threecommerce_cookie_scan` con le colonne `provider`, `sort_order`, `created_at`, `updated_at`; nuova tabella `threecommerce_cookie_store` per i testi delle store view. Serve `bin/magento setup:upgrade`.
+- Changed: nel banner i cookie sono ordinati per categoria, ordinamento e nome; il cookie di consenso resta il primo dei necessari, aggiunto in automatico. I cookie pubblicati compaiono anche con la scansione spenta.
+- Changed: la vecchia pagina `tccookie/scan/index` rimanda alla griglia del registro; il permesso ACL resta `Threecommerce_CookieBanner::cookie_scan`.
+
 ## 1.4.0
 
 - Added: traduzione inglese `i18n/en_US.csv` di tutti i testi del banner (titolo, testi, pulsanti, pannello preferenze, categorie, durata e finalità del cookie di consenso), del dizionario dei cookie comuni (durate e finalità) e delle pagine admin.

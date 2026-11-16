@@ -12,8 +12,9 @@ Free cookie consent banner for Magento 2 and Mage-OS with three categories (nece
 - Three consent categories: **Necessary** (always on), **Statistics** and **Marketing**, with *Accept all*, *Reject*, *Customize* and *Save preferences* buttons.
 - **Prior blocking** of third-party scripts until the visitor gives consent (`type="text/plain"` plus `data-cookiecategory`).
 - Consent stored in a first-party cookie, with configurable name, duration and consent version. Raising the version asks everybody for consent again, for example after a policy change.
-- Per-category **cookie list** (name, duration, purpose) shown in the preferences panel.
-- **Automatic cookie scanner** (cron + browser report): detects the cookies your store really sets, classifies the common ones from a built-in dictionary (Magento, Hyvä, Google, Meta, Microsoft, TikTok, LinkedIn) and lets you review them in the admin.
+- One **cookie registry** as the single source of truth: admin grid with filters, inline edit and mass actions (publish / hide / delete), per-store-view texts (provider, duration, purpose) and the consent cookie added automatically.
+- **Cookie policy table widget** for CMS pages: the same published cookies as the banner (Name / Provider / Purpose / Duration), plain markup styled by your theme, optional category filter.
+- **Automatic cookie scanner** (cron + browser report): detects the cookies your store really sets, classifies the common ones from a built-in dictionary (Magento, Hyvä, Google, Meta, Microsoft, TikTok, LinkedIn, with provider) and adds them to the registry for review.
 - Optional **consent log** to prove consent (GDPR art. 7.1): anonymous random ID, choices, consent version, store view and date. Revocations are logged too. Off by default, with automatic purge, admin grid and CSV export.
 - Reopen the preferences from any link or button, and a `tc:cookie-consent` DOM event for your own scripts.
 - Brand colors from the admin or from CSS variables in your theme.
