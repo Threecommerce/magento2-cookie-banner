@@ -5,6 +5,10 @@ Tutte le modifiche rilevanti a questo modulo sono documentate in questo file.
 Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.1.0/)
 e questo progetto aderisce al [Semantic Versioning](https://semver.org/lang/it/).
 
+## 1.5.2
+
+- Fixed: compatibilità con PHP 8.5. Tolta la chiamata a `curl_close()` nella scansione dei cookie: è deprecata in PHP 8.5 e Magento trasforma l'avviso in errore, quindi la scansione si fermava. Nessun cambiamento sulle versioni di PHP precedenti.
+
 ## 1.5.1
 
 - Fixed: nella griglia *Registro cookie* la colonna Azioni era vuota (mancavano *Modifica* e *Cancella*).
